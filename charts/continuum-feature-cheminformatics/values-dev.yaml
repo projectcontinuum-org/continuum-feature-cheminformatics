@@ -1,0 +1,25 @@
+# ============================================================
+# Development overrides for continuum-feature-cheminformatics
+# Usage: helm install continuum-feature-cheminformatics ./charts/continuum-feature-cheminformatics -f charts/continuum-feature-cheminformatics/values-dev.yaml -n continuum-dev --create-namespace
+# ============================================================
+
+global:
+  imagePullPolicy: Always
+
+continuum:
+  secrets:
+    minio:
+      rootUser: "dev-minio-root"
+      rootPassword: "dev-minio-secret"
+
+  featureCheminformatics:
+    replicas: 1
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+    autoscaling:
+      enabled: false
