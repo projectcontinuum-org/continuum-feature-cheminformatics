@@ -1,0 +1,26 @@
+{{- if and .Values.continuum.featureCheminformatics.enabled .Values.continuum.featureCheminformatics.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "continuum-feature-cheminformatics.fullname" . }}
+  labels:
+    {{- include "continuum-feature-cheminformatics.componentLabels" (dict "context" $ "component" "feature-cheminformatics" "extra" .Values.continuum.featureCheminformatics.labels.hpa) | nindent 4 }}
+  {{- with (include "continuum-feature-cheminformatics.componentAnnotations" (dict "context" $ "extra" .Values.continuum.featureCheminformatics.annotations.hpa)) }}
+  annotations:
+    {{- nindent 4 . }}
+  {{- end }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "continuum-feature-cheminformatics.fullname" . }}
+  minReplicas: {{ .Values.continuum.featureCheminformatics.autoscaling.minReplicas | default 1 }}
+  maxReplicas: {{ .Values.continuum.featureCheminformatics.autoscaling.maxReplicas | default 5 }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.continuum.featureCheminformatics.autoscaling.targetCPUUtilizationPercentage | default 75 }}
+{{- end }}
