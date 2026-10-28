@@ -8,7 +8,7 @@
 
 # Continuum Feature Cheminformatics
 
-Production-grade cheminformatics workflow nodes for the [Continuum](https://github.com/projectcontinuum/Continuum) platform, powered by [RDKit](https://www.rdkit.org/). Designed for computational chemistry, medicinal chemistry, and drug discovery teams who need scalable, reproducible molecular processing pipelines.
+Production-grade cheminformatics workflow nodes for the [Continuum](https://github.com/projectcontinuum-org/continuum-platform-core) platform, powered by [RDKit](https://www.rdkit.org/). Designed for computational chemistry, medicinal chemistry, and drug discovery teams who need scalable, reproducible molecular processing pipelines.
 
 > **From SMILES to insights** -- parse, standardize, fingerprint, filter, react, and visualize molecules at scale, all within declarative, versionable Continuum workflows.
 
@@ -309,7 +309,7 @@ cd docker && docker compose up -d && cd ..
 
 Your cheminformatics nodes are now registered with Temporal and ready to execute workflows.
 
-For detailed setup instructions and how to create custom nodes, see the [Continuum Feature Template](https://github.com/projectcontinuum/continuum-feature-template).
+For detailed setup instructions and how to create custom nodes, see the [Continuum Feature Template](https://github.com/projectcontinuum-org/continuum-feature-template).
 
 ---
 
@@ -317,8 +317,8 @@ For detailed setup instructions and how to create custom nodes, see the [Continu
 
 | Repository | Description |
 |-----------|-------------|
-| [Continuum](https://github.com/projectcontinuum/Continuum) | Core platform -- API server, worker framework, shared libraries |
-| [continuum-workbench](https://github.com/projectcontinuum/continuum-workbench) | Browser-based workflow editor (Eclipse Theia + React Flow) |
-| [continuum-feature-base](https://github.com/projectcontinuum/continuum-feature-base) | Base analytics nodes -- data transforms, REST, scripting |
-| [continuum-feature-ai](https://github.com/projectcontinuum/continuum-feature-ai) | AI/ML nodes -- LLM fine-tuning with Unsloth + LoRA |
-| [continuum-feature-template](https://github.com/projectcontinuum/continuum-feature-template) | Template for scaffolding new feature modules |
+| [Continuum](https://github.com/projectcontinuum-org/continuum-platform-core) | Core platform -- API server, worker framework, shared libraries |
+| [continuum-workbench](https://github.com/projectcontinuum-org/continuum-workbench) | Browser-based workflow editor (Eclipse Theia + React Flow) |
+| [continuum-feature-base](https://github.com/projectcontinuum-org/continuum-feature-base) | Base analytics nodes -- data transforms, REST, scripting |
+| [continuum-feature-ai](https://github.com/projectcontinuum-org/continuum-feature-ai) | AI/ML nodes -- LLM fine-tuning with Unsloth + LoRA |
+| [continuum-feature-template](https://github.com/projectcontinuum-org/continuum-feature-template) | Template for scaffolding new feature modules |
