@@ -1,12 +1,18 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/RDKit-Powered-3B82F6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN3Y1aDJ2N2g1djRoNnYtNGg1di03aDJWN0wxMiAyem0wIDIuMTggNy4wOSAzLjU0TDEyIDExLjI3IDQuOTEgNy43MiAxMiA0LjE4eiIvPjwvc3ZnPg==" alt="RDKit Powered"/>
-  <img src="https://img.shields.io/badge/Nodes-38-10B981?style=for-the-badge" alt="38 Nodes"/>
-  <img src="https://img.shields.io/badge/Categories-10-8B5CF6?style=for-the-badge" alt="10 Categories"/>
-  <img src="https://img.shields.io/badge/Descriptors-41-F59E0B?style=for-the-badge" alt="41 Descriptors"/>
-  <img src="https://img.shields.io/badge/Fingerprints-9_Types-EF4444?style=for-the-badge" alt="9 Fingerprint Types"/>
-</p>
+<div align="center">
+  <h1>Continuum Feature Cheminformatics</h1>
+  <strong>RDKit-powered cheminformatics nodes for <a href="https://github.com/projectcontinuum-org/continuum-platform-core">Project Continuum</a></strong>
+</div>
 
-# Continuum Feature Cheminformatics
+<div align="center">
+  <img src="https://img.shields.io/badge/License-Apache_2.0-green" alt="License: Apache 2.0">
+  <img src="https://img.shields.io/badge/Kotlin-2.1-blue?logo=kotlin&logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Spring_Boot-3.4-green?logo=springboot&logoColor=white" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/Nodes-38-orange" alt="38 Nodes">
+  <img src="https://img.shields.io/badge/RDKit-powered-3B82F6" alt="RDKit">
+  <img src="https://img.shields.io/badge/JDK-21-red" alt="JDK 21">
+</div>
+
+---
 
 Production-grade cheminformatics workflow nodes for the [Continuum](https://github.com/projectcontinuum-org/continuum-platform-core) platform, powered by [RDKit](https://www.rdkit.org/). Designed for computational chemistry, medicinal chemistry, and drug discovery teams who need scalable, reproducible molecular processing pipelines.
 
@@ -284,26 +290,21 @@ continuum-feature-cheminformatics/
 
 - **JDK 21** -- [Eclipse Temurin](https://adoptium.net/) recommended
 - **Docker & Docker Compose** -- for local infrastructure
-- **GitHub PAT** with `read:packages` scope -- for downloading Continuum dependencies
 
 ### Quick Start
 
 ```bash
 # 1. Clone the repository
-git clone <repository-url>
+git clone https://github.com/projectcontinuum-org/continuum-feature-cheminformatics.git
 cd continuum-feature-cheminformatics
 
-# 2. Set GitHub credentials (for Continuum dependency resolution)
-export GITHUB_USERNAME=your-username
-export GITHUB_TOKEN=ghp_your-token
-
-# 3. Start local infrastructure
+# 2. Start local infrastructure
 cd docker && docker compose up -d && cd ..
 
-# 4. Build the project
+# 3. Build the project
 ./gradlew build
 
-# 5. Run the worker
+# 4. Run the worker
 ./gradlew :worker:bootRun
 ```
 
@@ -322,3 +323,7 @@ For detailed setup instructions and how to create custom nodes, see the [Continu
 | [continuum-feature-base](https://github.com/projectcontinuum-org/continuum-feature-base) | Base analytics nodes -- data transforms, REST, scripting |
 | [continuum-feature-ai](https://github.com/projectcontinuum-org/continuum-feature-ai) | AI/ML nodes -- LLM fine-tuning with Unsloth + LoRA |
 | [continuum-feature-template](https://github.com/projectcontinuum-org/continuum-feature-template) | Template for scaffolding new feature modules |
+
+## License
+
+[Apache 2.0](LICENSE)
