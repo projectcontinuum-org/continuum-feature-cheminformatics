@@ -4,6 +4,26 @@ entries:
   - annotations:
       continuum.io/requires: continuum-infra >= 0.1.0, continuum-platform >= 0.1.0
     apiVersion: v2
+    appVersion: 0.0.7
+    created: "2026-11-10T05:05:39.556015844Z"
+    description: Project Continuum feature worker — cheminformatics Temporal worker
+      nodes
+    digest: 6f492864a774750f493f6570bdde82b064144759c4b38eb7fc56eb5315895609
+    home: https://github.com/projectcontinuum-org
+    keywords:
+    - continuum
+    - workflow
+    - feature-worker
+    maintainers:
+    - name: Project Continuum
+    name: continuum-feature-cheminformatics
+    type: application
+    urls:
+    - https://github.com/projectcontinuum-org/continuum-feature-cheminformatics/releases/download/release/v0.0.7/continuum-feature-cheminformatics-0.1.2.tgz
+    version: 0.1.2
+  - annotations:
+      continuum.io/requires: continuum-infra >= 0.1.0, continuum-platform >= 0.1.0
+    apiVersion: v2
     appVersion: 0.0.6
     created: "2026-10-09T06:35:23.129657157Z"
     description: Project Continuum feature worker — cheminformatics Temporal worker
@@ -21,4 +41,4 @@ entries:
     urls:
     - https://github.com/projectcontinuum-org/continuum-feature-cheminformatics/releases/download/continuum-feature-cheminformatics-0.1.0/continuum-feature-cheminformatics-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-09T06:35:23.129664128Z"
+generated: "2026-11-10T05:05:39.555218994Z"
