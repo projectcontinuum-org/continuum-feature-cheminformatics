@@ -2,8 +2,8 @@ apiVersion: v2
 name: continuum-feature-cheminformatics
 description: Project Continuum feature worker — cheminformatics Temporal worker nodes
 type: application
-version: 0.1.1
-appVersion: "0.0.6"
+version: 0.1.2
+appVersion: "0.0.7"
 keywords:
   - continuum
   - workflow
