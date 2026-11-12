@@ -14,7 +14,7 @@ continuum {
     // Override with -PworkerBaseImage=... for local builds.
     jibFromImage.set("eclipse-temurin:21-jre")
     // Container image pushed by `./gradlew :worker:jib` (see .github/workflows/on-release.yml)
-    jibToImage.set("projectcontinuum/continuum-feature-base:${project.version}")
+    jibToImage.set("projectcontinuum/continuum-feature-cheminformatics:${project.version}")
 }
 
 dependencies {
